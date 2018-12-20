@@ -1,6 +1,6 @@
-#TEAM B : MOVIE
+##TEAM B : MOVIE
 
-### Contributor : 
+## Contributor : 
 * **Arham Abiyan** - *Scrapping*
 * **Muhammad Zahidin Nur** - *Backend*
 * **Furwadi Pung** - *Backend*
@@ -10,6 +10,7 @@
 * **Zulfan** - *Web*
 
 ##Scrap
+
 ## Install Library
 
 Scraping menggunakan bahasa pemrograman Python 3.6 dengan Framework Scrapy
