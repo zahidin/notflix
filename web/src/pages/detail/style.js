@@ -9,7 +9,8 @@ export const styles = (theme) => ({
 		backgroundImage: 'linear-gradient(to top,rgba(0,0,0, 1), rgba(0,0,0, 1),  rgba(0,0,0, 0.7), rgba(0,0,0, 0.1))'
 	},
 	roots: {
-		height: 'calc(100vh - 50px)'
+		minHeight: 'calc(100vh )',
+		display: 'flex'
 	}
 });
 

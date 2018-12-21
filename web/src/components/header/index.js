@@ -8,7 +8,6 @@ import Badge from '@material-ui/core/Badge';
 import MenuItem from '@material-ui/core/MenuItem';
 import Menu from '@material-ui/core/Menu';
 import { withStyles } from '@material-ui/core/styles';
-import MenuIcon from '@material-ui/icons/Menu';
 import SearchIcon from '@material-ui/icons/Search';
 import AccountCircle from '@material-ui/icons/AccountCircle';
 import MailIcon from '@material-ui/icons/Mail';
@@ -113,24 +112,10 @@ class Header extends React.Component {
 						}
 					]}
 				>
-					<AppBar
-						position={sticky ? 'static' : 'fixed'}
-						style={{ backgroundColor: '#14141488' }}
-					>
+					<AppBar position={sticky ? 'static' : 'fixed'} style={{ backgroundColor: '#14141488' }}>
 						<Toolbar>
-							<IconButton
-								className={classes.menuButton}
-								color='inherit'
-								aria-label='Open drawer'
-							>
-								<MenuIcon />
-							</IconButton>
 							<Link to='/'>
-								<Button
-									variant='contained'
-									color='primary'
-									className={classNames(classes.left)}
-								>
+								<Button variant='contained' color='primary' className={classNames(classes.left)}>
 									NOTFLIX
 								</Button>
 							</Link>
@@ -177,11 +162,7 @@ class Header extends React.Component {
 								</IconButton>
 							</div>
 							<div className={classes.sectionMobile}>
-								<IconButton
-									aria-haspopup='true'
-									onClick={this.handleMobileMenuOpen}
-									color='inherit'
-								>
+								<IconButton aria-haspopup='true' onClick={this.handleMobileMenuOpen} color='inherit'>
 									<MoreIcon />
 								</IconButton>
 							</div>

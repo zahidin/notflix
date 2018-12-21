@@ -8,7 +8,6 @@ import Select from '@material-ui/core/Select';
 import { connect } from 'react-redux';
 import { ALL_CATEGORIES, GET_CATEGORY } from '../../../../redux/actions/category';
 
-import { data } from '../../../../dummy-data';
 import { styles } from './styles';
 
 class SelectCategories extends React.Component {

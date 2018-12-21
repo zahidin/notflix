@@ -11,7 +11,7 @@ import Video from './components/video';
 import BottomTab from './components/bottom-tab';
 import Related from './components/related';
 import Series from './components/series';
-
+import Chip from '@material-ui/core/Chip';
 import { styles, styled } from './style';
 import { data } from '../../dummy-data';
 
@@ -31,6 +31,8 @@ class Detail extends React.Component {
 
 	static getDerivedStateFromProps(nextProps, prevState) {
 		if (nextProps.location.query !== prevState.query) {
+			if (nextProps.location.query) nextProps.dispatch(GET_MOVIE(nextProps.location.query.id));
+
 			return { query: nextProps.location.query };
 		} else return null;
 	}
@@ -76,7 +78,7 @@ class Detail extends React.Component {
 				style={{
 					position: 'relative',
 					zIndex: 100,
-					height: '100%',
+					minHeight: 'calc(100vh - 50px)',
 					padding: '70px 10px 10px 10px',
 					width: '100%'
 				}}
@@ -86,7 +88,13 @@ class Detail extends React.Component {
 					<Typography gutterBottom variant='h4' style={{ color: '#F44336' }}>
 						{this.props.movie.data[0] && this.props.movie.data[0].title}
 					</Typography>
-					<Typography gutterBottom paragraph variant='subtitle1' style={{ color: 'white' }}>
+
+					<Chip
+						style={{ marginBottom: 10 }}
+						label={this.props.movie.data[0] && this.props.movie.data[0].rating}
+						color='secondary'
+					/>
+					<Typography gutterBottom paragraph variant='caption' style={{ color: 'white' }}>
 						{this.props.movie.data[0] && this.props.movie.data[0].sinopsis}
 					</Typography>
 					{this.props.movie.data[0] && this.renderCategoryList()}
@@ -114,7 +122,7 @@ class Detail extends React.Component {
 			return <Series />;
 		}
 		if (this.state.renderStatus === 2) {
-			return <Related />;
+			return <Related category={this.props.movie.data[0] && this.props.movie.data[0].genre} />;
 		}
 	};
 

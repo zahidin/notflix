@@ -42,7 +42,7 @@ class BottomTab extends React.Component {
 				<BottomNavigationAction
 					style={this.changeColor(1)}
 					className={classes.navigation}
-					label='Series'
+					label='Popular'
 					icon={<LocalMovies />}
 				/>
 				<BottomNavigationAction

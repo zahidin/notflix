@@ -1,7 +1,6 @@
 import React from 'react';
 import { withStyles } from '@material-ui/core/styles';
 import { connect } from 'react-redux';
-import { GET_CATEGORY } from '../../redux/actions/category';
 
 import Main from './components/main/';
 import NewReleases from '../../components/horizontal-list';

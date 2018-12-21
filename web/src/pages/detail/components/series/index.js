@@ -2,12 +2,12 @@ import React from 'react';
 import { withStyles } from '@material-ui/core/styles';
 import Grid from '@material-ui/core/Grid';
 import { connect } from 'react-redux';
+import CircularProgress from '@material-ui/core/CircularProgress';
 
-import ListMovie from '../../../../components/list-movie';
 import { ALL_POPULARS } from '../../../../redux/actions/popular';
+import HorizontalList from '../../../../components/horizontal-list';
 
 import { styles } from './styles';
-import { data } from '../../../../dummy-data';
 
 class Popular extends React.Component {
 	componentDidMount() {
@@ -15,8 +15,8 @@ class Popular extends React.Component {
 	}
 
 	renderLoading(classes) {
-		// if (!this.props.popular.results) return <CircularProgress className={classes.progress} color='secondary' />;
-		return <ListMovie title='Popular' data={data} />;
+		if (!this.props.popular.results) return <CircularProgress className={classes.progress} color='secondary' />;
+		return <HorizontalList title='Popular' data={this.props.popular} type='ALL_POPULARS' />;
 	}
 
 	render() {

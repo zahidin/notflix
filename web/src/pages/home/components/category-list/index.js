@@ -12,17 +12,14 @@ import CircularProgress from '@material-ui/core/CircularProgress';
 
 import { styles } from './index-style';
 import Title from '../../../../components/title';
-import { data } from '../../../../dummy-data';
 import CategoryContent from './category-content';
-import _ from 'lodash';
 
 class CategoryList extends React.Component {
 	state = {
 		categories: {
 			name: 'Action',
 			id: 'Action'
-		},
-		data: _.filter(data.movies, (e) => _.includes(e.categoriesId, 2))
+		}
 	};
 
 	isActive = (id) => {
@@ -72,7 +69,7 @@ class CategoryList extends React.Component {
 	render() {
 		const { classes } = this.props;
 
-		const { data, categories } = this.state;
+		const { categories } = this.state;
 		return (
 			<div>
 				<Grid container>

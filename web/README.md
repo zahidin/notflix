@@ -1,13 +1,24 @@
-#Web Notflix	
+CARA MENJALANKAN
 
-## Installation
 
-> npm install
+1. NPM INSTALL
 
-## Setting Ip Backend
 
-> cd src/configip.js
+2. Ubah targat endpoint pada
 
-## Run Web
 
-> npm start
+3. src/configip.js
+
+
+   contoh : export const ip = "http://kemanajaa.com"
+
+   note: ga sempet buat .env
+
+
+4. NPM START
+
+
+
+  note: Jangan lupa jalanin frontend dulu ka..?
+  note : lebih baik konek internet
+  
