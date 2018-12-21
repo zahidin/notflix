@@ -1,4 +1,4 @@
-#TEAM B : MOVIE
+# TEAM B : MOVIE
 
 ## Contributor : 
 * **Arham Abiyan** - *Scrapping*
@@ -9,7 +9,8 @@
 * **Syukri Husaibatul Khairi HSB** - *Web*
 * **Zulfan** - *Web*
 
-#Scrap
+# Scrap
+
 ## Install Library
 
 Scraping menggunakan bahasa pemrograman Python 3.6 dengan Framework Scrapy
@@ -29,7 +30,7 @@ List Spider yg tersedia
 	
 > scrapy crawl (spider) -o item.csv
 
-#Backend
+# Backend
 
 Api Notflix menggunakan framework adonis js dan menggunakan database mysql
 
@@ -51,7 +52,7 @@ Endpoint yang tersedia bisa cek disini :
 
 [Postman](https://documenter.getpostman.com/view/5526317/Rzn6vi31)
 
-#Mobile
+# Mobile
 
 ## Prerequisites
 
@@ -65,6 +66,7 @@ Endpoint yang tersedia bisa cek disini :
 
 open terminal and change directory to your desired folder, then:
 
+``` 
 $ git clone https://github.com/radenaryayusuf/movieCloneApp
 
 $ cd movieCloneApp
@@ -72,21 +74,23 @@ $ cd movieCloneApp
 $ npm install
 
 $ react-native link
+````
 
 
 ## Running Your App
 
 Make sure to open your emulator first, then
 
+``` 
 $ react-native run-android
 
 or
 
 $ react-native run-ios
-
+```
 
 ##cons (On progress)
-
+```
 $ Login Auth
 
 $ Play Video Streaming
@@ -98,9 +102,9 @@ $ Category
 $ Drawer
 
 $ One Signal
+```
 
-
-#Web
+# Web
 
 ## Installation
 
